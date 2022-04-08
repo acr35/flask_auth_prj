@@ -8,7 +8,30 @@
              <h2>Register</h2>
              {{ render_form(form) }}
          </div>
+         <div id ="message" class="col-5">
+            <div id="letter" class="red">
+                Has lower case letter
+            </div>
+         </div>
     </div>
+<style>
+.invalid{
+    color:red;
+}
+.valid{
+    color:green;
+}
+</style>
+<script>
+    var passwordField = document.getElementById("password");
+    var letter = document.getElementById("leter");
 
+    passwordField.onfocus = function(){
+        var message = document.getElementById("message");
+        message.style.display = "black";
+        message.style.border = "1px solid";
+
+    }
+</script>
 
 {% endblock %}
